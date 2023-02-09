@@ -5,31 +5,24 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.List;
 
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class AddressDTO {
+public class PersonAddressDTO {
 
     private Long id;
 
     @NotEmpty
-    @Size(min = 0, max = 100)
-    private String publicPlace;
+    @Size(min = 2, max = 100)
+    private String name;
 
-    @NotEmpty
-    @Size(min = 0, max = 9)
-    private String zipCode;
+    private String birthDate;
 
-    @NotNull
-    private Long number;
-
-    @NotEmpty
-    @Size(min = 0, max = 100)
-    private String city;
-
+    private List<AddressDTO> address;
 }

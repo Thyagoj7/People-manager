@@ -1,6 +1,9 @@
 package com.manager.peoplemanager.mapper;
 
+import com.manager.peoplemanager.dto.request.AddressDTO;
+import com.manager.peoplemanager.dto.request.PersonAddressDTO;
 import com.manager.peoplemanager.dto.request.PersonDTO;
+import com.manager.peoplemanager.entity.Address;
 import com.manager.peoplemanager.entity.Person;
 import org.mapstruct.*;
 import org.mapstruct.factory.Mappers;
@@ -14,4 +17,7 @@ public interface PersonMapper {
     Person toModel(PersonDTO personDTO);
 
     PersonDTO toDTO(Person person);    //--> toDTO
+
+
+
 }
